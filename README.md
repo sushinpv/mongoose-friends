@@ -66,7 +66,15 @@ To remove a friendship at any point in the process, just:
     User.removeFriend(user1, user2, callback);
     // or vice-versa
     User.removeFriend(user2, user1, callback);
+    
+To check weather two users are friends are not:
 
+    User.areFriends(user_1_id, user_2_id, (data) => {
+        res.status(200).json({
+            isFriend: data
+        })
+    });
+    
 All the static methods have instance variants:
 
     user.getFriends(options, cb);
